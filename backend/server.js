@@ -4,7 +4,7 @@ const connectDB = require("./db/connectDB")
 const cloudinary = require("cloudinary");
 const path = require('path');
 var express = require('express');  
-var app = express();
+
 
 
 // Handling Uncaught Execption => anything not defind Uncaught Execption 
