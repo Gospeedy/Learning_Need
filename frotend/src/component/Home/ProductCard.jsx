@@ -14,7 +14,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { FitScreen } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import {dispalyMoney  ,generateDiscountedPrice} from "../DisplayMoney/DisplayMoney"
+import {
+  dispalyMoney,
+  generateDiscountedPrice,
+} from "../DisplayMoney/DisplayMoney";
 import { addItemToCart } from "../../actions/cartAction";
 import { useDispatch } from "react-redux";
 const useStyles = makeStyles((theme) => ({
@@ -27,21 +30,18 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "transparent",
     currsor: "pointer",
     boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
-    "&:hover":{
+    "&:hover": {
       boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.8)",
-
-    }
-  
+    },
   },
   media: {
     height: 200,
     width: "100%",
     objectFit: "cover",
-    
-   },
-   
+  },
+
   button: {
-    marginTop:-15,
+    marginTop: -15,
     backgroundColor: "#191D88",
     color: "white",
     borderRadius: 0,
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
   },
   description: {
     fontSize: "0.9rem",
-    fontWeight: 500, 
+    fontWeight: 500,
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1),
     display: "-webkit-box",
@@ -76,8 +76,7 @@ const useStyles = makeStyles((theme) => ({
     WebkitLineClamp: 3,
     WebkitBoxOrient: "vertical",
   },
-}
-));
+}));
 
 const ProductCard = ({ product }) => {
   React.useEffect(() => {
@@ -85,24 +84,26 @@ const ProductCard = ({ product }) => {
   }, []);
   const dispatch = useDispatch();
   const classes = useStyles();
-    let discountPrice = generateDiscountedPrice(product.price);
-    discountPrice = dispalyMoney(discountPrice);
+  let discountPrice = generateDiscountedPrice(product.price);
+  discountPrice = dispalyMoney(discountPrice);
   const oldPrice = dispalyMoney(product.price);
-  
+
   const truncated =
-    product.description
-      .split(" ")
-      .slice(0, 5)
-      .join(" ") + "...";
-      const  nameTruncated = product.name.split(" ").slice(0, 3).join(" ") + "...";
+    product.description.split(" ").slice(0, 5).join(" ") + "...";
+  const nameTruncated = product.name.split(" ").slice(0, 3).join(" ") + "...";
 
-
-      const addTocartHandler = (id , qty) => {
-        dispatch(addItemToCart(id , qty))
-      }
+  const addTocartHandler = (id, qty) => {
+    dispatch(addItemToCart(id, qty));
+  };
 
   return (
-    <Card className={classes.root} data-aos="fade-zoom-in" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" >
+    <Card
+      className={classes.root}
+      data-aos="fade-zoom-in"
+      data-aos-offset="200"
+      data-aos-easing="ease-in-sine"
+      data-aos-duration="600"
+    >
       <Link
         className="productCard"
         to={`/product/${product._id}`}
@@ -165,4 +166,3 @@ const ProductCard = ({ product }) => {
 };
 
 export default ProductCard;
-

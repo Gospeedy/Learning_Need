@@ -10,7 +10,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   Services_section: {
-    backgroundColor: "#102C57",
+    backgroundColor: "#191D88",
     paddingTop: theme.spacing(0.5),
     paddingBottom: theme.spacing(0.5),
     fontFamily: "'Roboto', sans-serif",
