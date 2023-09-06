@@ -2,8 +2,11 @@ const app = require("./app");
 const dotenv = require("dotenv");
 const connectDB = require("./db/connectDB")
 const cloudinary = require("cloudinary");
-const path = require('path')
+const path = require('path');
+const express = require('express')
 
+
+const app = express()
 // Handling Uncaught Execption => anything not defind Uncaught Execption 
 
 process.on("uncaughtException" , (err) =>{
