@@ -75,12 +75,11 @@ margin-top: 0;
 }
 .Home_Page{
   overflow-x: hidden;
-  background-image: url('../../Image/vector.jpg');
+  background-image: url('../../Image/hexagon.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
-
+  filter: brightness(100%);
 }
 
 
