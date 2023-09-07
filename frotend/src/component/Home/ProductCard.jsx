@@ -24,14 +24,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "280px",
     height: FitScreen,
-    borderTopRightRadius: "25px",
-    borderBottomLeftRadius: "25px",
+    borderRadius:"20px",
     margin: theme.spacing(4),
-    backgroundColor: "transparent",
+    backgroundColor: "white",
     currsor: "pointer",
     boxShadow: "0px 1px 2px 0px rgba(0,0,0,0.4)",
     "&:hover": {
-      boxShadow: "-1px 10px 29px 0px rgba(0,0,0,0.8)",
+      boxShadow: "-1px 10px 29px 0px #191D88",
     },
   },
   media: {

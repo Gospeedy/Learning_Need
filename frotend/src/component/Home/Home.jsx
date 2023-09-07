@@ -55,11 +55,12 @@ function Home() {
               <div className="heroSlider_Home">
                 <HeroSlider />;
               </div>
-              <div className="text_container" style={{ marginTop: "10vh" }}>
+              <div className="text_container" style={{ marginTop: "10vh",}} >
                 <Grid
                   container
                   rowSpacing={1}
                   columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+                  
                 >
                   <Grid p xs={12} md={6}>
                     <p
@@ -249,7 +250,7 @@ function Home() {
 
                 {/* <Traits /> */}
               </div>
-            </div>
+              </div>
           </>
         </>
       )}

@@ -94,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
 
 const slides = [
   {
-    image: require("../../Image/Cricket-wepon/banner1.jpg"),
+    image: require("../../Image/4.jpg"),
     quote:
       "Training & Management Consulting",
     saleText:
@@ -103,7 +103,7 @@ const slides = [
   },
   
   {
-    image: require("../../Image/Cricket-wepon/banner2.jpg"),
+    image: require("../../Image/2.jpg"),
     quote:
       "Elevate Your Performance and Unleash Your True Cricketing Potential with Our Cutting-Edge Gear",
     saleText: "New Arrivals: Enhance your skills and excel on the field",
